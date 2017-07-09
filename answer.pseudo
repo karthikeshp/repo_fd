@@ -1,0 +1,17 @@
+import sys
+import random
+
+def gen_rand_num(name="unnamed"):
+    """
+    This module takes a name and generate a random.
+    And prints the name with the random number. 
+    """
+    num = random.randint(6, 15)
+    return '{0} {1}'.format(name, num)
+
+if __name__ == '__main__':
+    args = sys.argv
+    if len(args) > 1:
+        print gen_rand_num(args[1])
+    else:
+        print gen_rand_num()
